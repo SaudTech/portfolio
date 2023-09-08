@@ -3,7 +3,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-
+import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home/Home'
 import DefaultLayout from "./DefaultLayout";
 
@@ -17,6 +17,7 @@ const App: React.FC = () => {
           </Route>
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </div>
   )
 }
