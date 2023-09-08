@@ -18,6 +18,29 @@
   -webkit-text-size-adjust: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 6px; /* Adjust width as needed */
+  height: 6px; /* Adjust height as needed */
+}
+
+::-webkit-scrollbar-track {
+  background: #20211B; /* Adjust the color as per your preference */
+}
+
+/* For Webkit browsers */
+::-webkit-scrollbar-thumb {
+  background-color: #B0B0B0; /* Adjust color as per your preference */
+  border-radius: 4px; /* You can adjust the border-radius for rounded corners */
+  &:hover {
+    background-color: #A0A0A0; /* Color when hovering over the thumb */
+  }
+}
+
+body {
+  scrollbar-width: thin; /* or "auto" */
+  scrollbar-color: #B0B0B0 #20211B; /* thumb and track color */
+}
+
 ::selection {
   background-color: #A057E3;
   color: white;
@@ -26,6 +49,11 @@
 @layer utilities {
   .custom-grid {
     @apply grid;
-    grid-template-columns: 20% 10% 40% 10% 20%;
+    grid-template-columns: 100%;
+    padding: 0 1rem;
+
+    @screen lg {
+      grid-template-columns: 20% 10% 40% 10% 20%;
+    }
   }
 }
