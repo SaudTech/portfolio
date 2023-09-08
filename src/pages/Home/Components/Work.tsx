@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import WorkInterface from "../Constant/WorkInterface";
 import WorkData from "../Constant/Work"
 import { FaLightbulb } from "react-icons/fa"
@@ -18,8 +19,16 @@ interface CardProps {
   work: WorkInterface
 }
 const Card: React.FC<CardProps> = ({ work }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.25,  // <-- Adjusted threshold
+    delay: 100,
+  });
+
+
   return (
-    <div className='bg-cardBg hover:bg-cardBgHover transition-all rounded-lg p-6 shadow-md hover:shadow-lg cursor-pointer'>
+    <div ref={ref}
+      className={`${inView ? 'opacity-100' : 'opacity-0'} bg-cardBg hover:bg-cardBgHover transition-all duration-700 rounded-xl p-6 shadow-md hover:shadow-lg cursor-pointer`}>
       <div className='flex justify-between items-center'>
         <h1 className='text-xl font-semibold'>{work.title}</h1>
         {work.isSideProject && <span className='text-sm text-lightTextColor' title='Side project'><FaLightbulb /></span>}
