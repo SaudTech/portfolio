@@ -55,9 +55,28 @@ body {
     @apply grid;
     grid-template-columns: 100%;
     padding: 0 1rem;
-
     @screen lg {
-      grid-template-columns: 20% 10% 40% 10% 20%;
+      grid-template-columns: 15% 15% 40% 15% 15%;
     }
   }
+}
+
+
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

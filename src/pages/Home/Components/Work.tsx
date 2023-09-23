@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import WorkInterface from "../Constant/WorkInterface";
 import WorkData from "../Constant/Work"
 import { FaLightbulb } from "react-icons/fa"
+import { Link } from 'react-router-dom';
 
 const Work: React.FC = () => {
   return (
@@ -27,20 +28,24 @@ const Card: React.FC<CardProps> = ({ work }) => {
 
 
   return (
-    <div ref={ref}
-      className={`${inView ? 'opacity-100' : 'opacity-0'} bg-cardBg hover:bg-cardBgHover transition-all duration-700 rounded-xl p-6 shadow-md hover:shadow-lg cursor-pointer`}>
-      <div className='flex justify-between items-center'>
-        <h1 className='text-xl font-semibold'>{work.title}</h1>
-        {work.isSideProject && <span className='text-sm text-lightTextColor' title='Side project'><FaLightbulb /></span>}
-      </div>
-      <p className='text-sm text-lightTextColor'>
-        {!work.isSideProject && `${work.from} - ${work.to} |`}
-        {" "}
-        {work.position}
-      </p>
-      <p className='mt-4'>
-        {work.description}
-      </p>
+    <div ref={ref}>
+      <Link to={`/${work.url}`} className='w-full'>
+        <div
+          className={`${inView ? 'opacity-100' : 'opacity-0'} bg-cardBg hover:bg-cardBgHover transition-all duration-700 rounded-xl p-6 shadow-md hover:shadow-lg cursor-pointer`}>
+          <div className='flex justify-between items-center'>
+            <h1 className='text-xl font-semibold'>{work.title}</h1>
+            {work.isSideProject && <span className='text-sm text-lightTextColor' title='Side project'><FaLightbulb /></span>}
+          </div>
+          <p className='text-sm text-lightTextColor'>
+            {!work.isSideProject && `${work.from} - ${work.to} |`}
+            {" "}
+            {work.position}
+          </p>
+          <p className='mt-4'>
+            {work.description}
+          </p>
+        </div>
+      </Link>
     </div>
   )
 };

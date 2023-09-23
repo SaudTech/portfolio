@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../index.css';
 
 import { SiReactrouter } from 'react-icons/si';
@@ -22,6 +22,7 @@ interface Icon {
 };
 
 const Skills: React.FC = () => {
+
   const icons: Icon[] = [
     {
       src: BiLogoReact,
@@ -75,12 +76,40 @@ const Skills: React.FC = () => {
     },
 
   ];
+  const iconsContainerRef = useRef<HTMLDivElement>(null);
+  const iconRef = useRef<HTMLAnchorElement | null>(null);
+  const doubledIcons = [...icons, ...icons]; // Double the list of icons
+  const [iconWidth, setIconWidth] = useState(0);
 
+  const scrollSpeed = 0.9; // Adjust this value to control the scroll speed
+
+  useEffect(() => {
+    if (iconRef.current) {
+      setIconWidth(iconRef.current.offsetWidth + 16); // Add 16px for the margin
+    }
+  }, []);
+
+  useEffect(() => {
+    const container = iconsContainerRef.current;
+    const totalWidth = icons.length * iconWidth;
+    const step = scrollSpeed;
+    const scrollInterval = setInterval(() => {
+      if (container) {
+        if (container.scrollLeft >= totalWidth) {
+          container.scrollLeft = 0;
+        } else {
+          container.scrollLeft += step;
+        }
+      }
+    }, 20);
+
+    return () => clearInterval(scrollInterval);
+  }, [iconWidth]);
   return (
     <div className='text-center'>
-      <div className="flex flex-wrap justify-center gap-8 max-w-full">
-        {icons.map((icon, index) => (
-          <a href={icon.link} key={index} target="_blank" rel="noopener noreferrer" title={icon.alt}>
+      <div ref={iconsContainerRef} className="icons-container flex flex-nowrap gap-8">
+        {doubledIcons.map((icon: Icon, index: number) => (
+          <a href={icon.link} key={index} target="_blank" rel="noopener noreferrer" title={icon.alt} ref={index === 0 ? iconRef : null}>
             {
               React.createElement(icon.src, { size: 40, title: icon.alt })
             }
@@ -88,6 +117,7 @@ const Skills: React.FC = () => {
         ))}
       </div>
     </div>
+
 
   )
 

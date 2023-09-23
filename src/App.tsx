@@ -6,6 +6,8 @@ import {
 import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home/Home'
 import DefaultLayout from "./DefaultLayout";
+import Project from "./pages/Project/index";
+
 
 const App: React.FC = () => {
   return (
@@ -14,6 +16,8 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/vizzhy" element={<Project.Vizzhy />} />
+            <Route path="/drvoxel" element={<Project.DrVoxel />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -14,7 +14,7 @@ const Home: React.FC = () => {
 
 
   React.useEffect(() => {
-    document.title = 'Saud | Developer at Care365'
+    document.title = 'Saud | Developer at Vizzhy'
   }, [])
 
   return (

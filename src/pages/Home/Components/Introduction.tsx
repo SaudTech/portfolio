@@ -2,6 +2,7 @@ import React from 'react';
 import { RoughNotation } from 'react-rough-notation';
 import SocialMediaButton from './SocialMediaButton';
 
+
 const Introduction: React.FC = () => {
   const [showWorkspace, setShowWorkspace] = React.useState(false);
   const [showUserFocused, setShowUserFocused] = React.useState(false);
@@ -38,11 +39,11 @@ const Introduction: React.FC = () => {
               <span className="mr-px align-middle">
                 {/* <span className="-my-2 inline-block text-[24px]">▲</span> */}
                 <span className="-my-2 inline-block text-[24px]">
-                  <img alt="Care365 Logo" src="https://res.cloudinary.com/dafq69nvu/image/upload/v1694063430/vizzhy-logo_drcojp.png" className='mb-1' width={26} height={26} />
+                  <img alt="Vizzhy Logo" src="https://res.cloudinary.com/dafq69nvu/image/upload/v1694063430/vizzhy-logo_drcojp.png" className='mb-1' width={26} height={26} />
                 </span>
               </span>
               <span className='company-name-gradient-text'>
-                Care365
+              Vizzhy
               </span>
             </span>
           </h2>
