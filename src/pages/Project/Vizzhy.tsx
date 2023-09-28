@@ -1,22 +1,12 @@
 import React from 'react'
 import FloatingNav from '../../FloatingNav'
 import Footer from '../../components/Footer/Footer'
-import { useInView } from 'react-intersection-observer';
 import { GetDuration } from '../../utils';
 import NotCompleted from '../../components/NotCompleted';
 import ScrollFadeDiv from '../../components/ScrollFadeDiv';
-import { Link } from 'react-router-dom';
-
-
 
 
 const Vizzhy: React.FC = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.25,  // <-- Adjusted threshold
-    delay: 100,
-  });
-
   const startDate = "August 2023";
   const endDate = "Present";
 

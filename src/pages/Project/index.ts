@@ -1,7 +1,7 @@
 import Vizzhy from "./Vizzhy";
 import DrVoxel from "./DrVoxel";
 
-let projects = {
+const projects = {
   Vizzhy,
   DrVoxel
 };

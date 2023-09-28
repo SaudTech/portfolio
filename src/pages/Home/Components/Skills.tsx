@@ -19,7 +19,7 @@ interface Icon {
   alt: string;
   className?: string | undefined;
   link: string;
-};
+}
 
 const Skills: React.FC = () => {
 
@@ -104,7 +104,7 @@ const Skills: React.FC = () => {
     }, 20);
 
     return () => clearInterval(scrollInterval);
-  }, [iconWidth]);
+  }, [iconWidth, icons.length]);
   return (
     <div className='text-center'>
       <div ref={iconsContainerRef} className="icons-container flex flex-nowrap gap-8">
