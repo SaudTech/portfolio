@@ -5,8 +5,6 @@ const FloatingNav: React.FC = () => {
   const [showNavbar, setShowNavbar] = React.useState(false);
 
   React.useEffect(() => {
-    // Check current route.
-    // If route is not '/', then show navbar.
     if (window.location.pathname !== '/') {
       setShowNavbar(true);
       return;
