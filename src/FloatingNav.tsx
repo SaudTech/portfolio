@@ -5,6 +5,12 @@ const FloatingNav: React.FC = () => {
   const [showNavbar, setShowNavbar] = React.useState(false);
 
   React.useEffect(() => {
+    // Check current route.
+    // If route is not '/', then show navbar.
+    if (window.location.pathname !== '/') {
+      setShowNavbar(true);
+      return;
+    }
     const handleScroll = () => {
       if (window.scrollY > 240) {
         setShowNavbar(true);
@@ -39,7 +45,7 @@ const FloatingNav: React.FC = () => {
           </a>
         </div>
 
-        <div className='flex items-center gap-3'>
+        <div className='flex items-center gap-6'>
           <SocialMediaButton type="linkedin" label='Linkedin' small />
           <SocialMediaButton type="github" label='Github' small />
         </div>

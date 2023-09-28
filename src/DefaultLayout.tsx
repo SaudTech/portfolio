@@ -9,7 +9,9 @@ const DefaultLayout: React.FC = () => {
       <div className='pt-48 pb-8'>
         <Outlet />
       </div>
-      <div className="pointer-events-none absolute inset-0 overflow-hidden"><div className="h-full bg-[url('https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9')] bg-top bg-no-repeat opacity-[0.3] will-change-transform" style={{ transform: "translateY(0px)" }}></div>fF</div>
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="h-full bg-[url('https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9')] bg-top bg-no-repeat opacity-[0.3] will-change-transform" style={{ transform: "translateY(0px)" }}></div>
+      </div>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 /**
  * Use to get the duration between two date strings
- * @param startDate
- * @param endDate
+ * @param startDate August 2023
+ * @param endDate Present or Septepmber 2023
  * 
  * @example GetDuration('January 2023', 'August 2023') // 8 months
  * @example GetDuration('January 2023', 'Present') // X months/years
