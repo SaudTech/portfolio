@@ -4,8 +4,6 @@ import WorkInterface from "../Constant/WorkInterface";
 import WorkData from "../Constant/Work"
 import { FaLightbulb } from "react-icons/fa"
 import { Link } from 'react-router-dom';
-import "../../playground.css"
-
 
 const Work: React.FC = () => {
   return (
