@@ -52,12 +52,14 @@ const Introduction: React.FC = () => {
 
       <div className='mt-8'>
         <p className='text-lg'>
-          Welcome to my <RoughNotation show={showWorkspace} type="highlight" color="#4B2447">Digital Workspace</RoughNotation>, {" "}
+          Welcome to my <RoughNotation show={showWorkspace} type="highlight" color="#4B2447"><span className="whitespace-nowrap">Digital Workspace</span></RoughNotation>, {" "}
           where I showcase my expertise in crafting{" "}
-          <RoughNotation show={showUserFocused} type="underline" color="#532323">User-focused Applications</RoughNotation>.{" "}
-          As a <RoughNotation show={showReactDev} type="circle" color="#8F2F70">React Developer</RoughNotation>, {" "}
+          <RoughNotation show={showUserFocused} type="underline" color="#532323">
+            <span className="whitespace-nowrap">User-focused Applications</span>
+            </RoughNotation>.{" "}
+          As a <RoughNotation show={showReactDev} type="circle" color="#8F2F70"><span className="whitespace-nowrap">React Developer</span></RoughNotation>, {" "}
           I thrive on turning complex problems into {" "}
-          <RoughNotation show={showScalable} type="underline" color="#81C784">Scalable Solutions</RoughNotation>.{" "}
+          <RoughNotation show={showScalable} type="underline" color="#81C784"><span className="whitespace-nowrap">Scalable Solutions</span></RoughNotation>.{" "}
           Join me as I navigate the ever-evolving landscape of technology,{" "}
           product development, and career growth.{" "}
         </p>

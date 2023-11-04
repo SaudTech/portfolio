@@ -34,14 +34,14 @@ const WorkList: Work[] = [
     description: "A comprehensive School Management platform I built from the ground up. Designed to foster collaboration between School Officials, Teachers, and Parents, it offers a myriad of features. The integrated in-app email system and efficient fee management particularly stand out, simplifying communication and financial processes.",
     url: "Kenroz"
   },
-  {
-    title: "Unnamed Side Project",
-    from: "August 2023",
-    to: "Present",
-    isSideProject: true,
-    position: "Full Stack Developer",
-    description: "An exploration of authentication and Realtime chat. With email and Google login options, this platform facilitates private one-on-one conversations and connections with friends, fostering easy and secure communication.",
-  }
+  // {
+  //   title: "Unnamed Side Project",
+  //   from: "August 2023",
+  //   to: "Present",
+  //   isSideProject: true,
+  //   position: "Full Stack Developer",
+  //   description: "An exploration of authentication and Realtime chat. With email and Google login options, this platform facilitates private one-on-one conversations and connections with friends, fostering easy and secure communication.",
+  // }
 ];
 
 export default WorkList;
