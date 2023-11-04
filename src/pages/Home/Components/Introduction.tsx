@@ -56,7 +56,7 @@ const Introduction: React.FC = () => {
           where I showcase my expertise in crafting{" "}
           <RoughNotation show={showUserFocused} type="underline" color="#532323">
             <span className="whitespace-nowrap">User-focused Applications</span>
-            </RoughNotation>.{" "}
+          </RoughNotation>.{" "}
           As a <RoughNotation show={showReactDev} type="circle" color="#8F2F70"><span className="whitespace-nowrap">React Developer</span></RoughNotation>, {" "}
           I thrive on turning complex problems into {" "}
           <RoughNotation show={showScalable} type="underline" color="#81C784"><span className="whitespace-nowrap">Scalable Solutions</span></RoughNotation>.{" "}

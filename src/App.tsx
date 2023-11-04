@@ -9,11 +9,15 @@ import DefaultLayout from "./DefaultLayout";
 import Project from "./pages/Project/index";
 import Loader from "./components/Loader";
 import React from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const App: React.FC = () => {
   return (
     <div>
       <Loader />
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
