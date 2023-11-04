@@ -7,7 +7,6 @@ import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home/Home'
 import DefaultLayout from "./DefaultLayout";
 import Project from "./pages/Project/index";
-import Playground from "./pages/playground";
 import Loader from "./components/Loader";
 import React from "react";
 
@@ -23,7 +22,6 @@ const App: React.FC = () => {
             <Route path="/drvoxel" element={<Project.DrVoxel />} />
             <Route path="/emvive" element={<Project.Emvive />} />
             <Route path="/kenroz" element={<Project.Kenroz />} />
-            <Route path="/playground" element={<Playground />} />
           </Route>
         </Routes>
       </BrowserRouter>
