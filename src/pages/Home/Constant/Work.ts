@@ -3,11 +3,11 @@ import Work from "../Constant/WorkInterface";
 const WorkList: Work[] = [
   {
     title: "Vizzhy ~ Healhcare",
-    from: "August 2023",
+    from: "June 2023",
     to: "Present",
     position: "Developer",
     description: "A dedicated health platform for diabetes patients, built with React. Features like ASR elevate the user experience, making interactions intuitive. A collaborative project aimed at revolutionizing patient care.",
-    url: "Vizzhy"
+    url: "vizzhy"
   },
   {
     title: "Dr.Voxel ~ Healhcare",
@@ -23,7 +23,7 @@ const WorkList: Work[] = [
     to: "April 2023",
     position: "Lead Developer",
     description: "A Saudi e-invoicing platform that simplifies invoice generation and ensures compliance with Zatca requirements. Powered by Vue.js, it offers users the convenience of seamless invoice submission, leaving the rest to the platform's robust Zatca integration. Led the development effort as the lead frontend developer.",
-    url: "Emvive"
+    url: "emvive"
   },
   {
     title: "Kenroz ~ School Management",
@@ -41,7 +41,6 @@ const WorkList: Work[] = [
     isSideProject: true,
     position: "Full Stack Developer",
     description: "An exploration of authentication and Realtime chat. With email and Google login options, this platform facilitates private one-on-one conversations and connections with friends, fostering easy and secure communication.",
-    url: "FirebaseChatApp"
   }
 ];
 

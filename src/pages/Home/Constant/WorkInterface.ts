@@ -6,7 +6,7 @@ interface Work {
   position: string;
   description?: string;
   isSideProject?: boolean;
-  url: string;
+  url?: string;
 }
 
 export default Work;

@@ -1,8 +1,11 @@
 import React from 'react'
 import SocialMediaButton from './pages/Home/Components/SocialMediaButton';
+import { Link, useLocation } from 'react-router-dom';
+import { IoIosArrowBack } from 'react-icons/io'
 
 const FloatingNav: React.FC = () => {
   const [showNavbar, setShowNavbar] = React.useState(false);
+  let prevPage = "";
 
   React.useEffect(() => {
     if (window.location.pathname !== '/') {
@@ -19,11 +22,11 @@ const FloatingNav: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
 
+    // 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   return (
     <header
@@ -33,14 +36,15 @@ const FloatingNav: React.FC = () => {
       `}
     >
       <nav className="container mx-auto flex justify-between items-center">
-        <div>
-          <a href="/" title='View Home Page'>
+        <div className='flex items-center gap-2'>
+          <Link to="/"><IoIosArrowBack /></Link>
+          <Link to="/" title='View Home Page'>
             <div className="hover:scale-105 transition-all duration-200 hover:shadow-lg rounded-full bg-gradient-to-tl from-purple/60 to-pink/60 p-[1.5px]">
               <div className="rounded-full p-px h-[38px] w-[38px]">
                 <img alt="A photo of Saud" src="https://res.cloudinary.com/dafq69nvu/image/upload/v1694073652/profile-picture.jpg" width="38" height="38" decoding="async" data-nimg="1" className="rounded-full" style={{ color: "transparent" }} />
               </div>
             </div>
-          </a>
+          </Link>
         </div>
 
         <div className='flex items-center gap-6'>

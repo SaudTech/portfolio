@@ -78,7 +78,7 @@ const Skills: React.FC = () => {
   ];
   const iconsContainerRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<HTMLAnchorElement | null>(null);
-  const doubledIcons = [...icons, ...icons]; // Double the list of icons
+  const doubledIcons = [...icons, ...icons];
   const [iconWidth, setIconWidth] = useState(0);
 
   const scrollSpeed = 0.9; // Adjust this value to control the scroll speed

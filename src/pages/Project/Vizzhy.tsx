@@ -4,11 +4,12 @@ import Footer from '../../components/Footer/Footer'
 import { GetDuration } from '../../utils';
 import NotCompleted from '../../components/NotCompleted';
 import ScrollFadeDiv from '../../components/ScrollFadeDiv';
+import Question from '../../components/Question';
 
 
 const Vizzhy: React.FC = () => {
-  const startDate = "August 2023";
-  const endDate = "Present";
+  const startDate = "June 2023";
+  const endDate = "November 2023";
 
   return (
     <div className='custom-grid'>
@@ -45,7 +46,5 @@ const Vizzhy: React.FC = () => {
     </div>
   )
 };
-
-const Question = ({ text }: { text: string }) => <h1 className='font-medium leading-loose text-2xl mb-5'>{text}</h1>;
 
 export default Vizzhy

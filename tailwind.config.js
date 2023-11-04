@@ -12,7 +12,7 @@ export default {
         'cardBg': '#393430',
         'cardBgHover': '#3B3939',
         'lightTextColor': '#99908D',
-      }
+      },
     },
   },
   plugins: [],
