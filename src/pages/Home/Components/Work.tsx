@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import WorkInterface from "../Constant/WorkInterface";
 import WorkData from "../Constant/Work"

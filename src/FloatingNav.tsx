@@ -1,11 +1,10 @@
 import React from 'react'
 import SocialMediaButton from './pages/Home/Components/SocialMediaButton';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io'
 
 const FloatingNav: React.FC = () => {
   const [showNavbar, setShowNavbar] = React.useState(false);
-  let prevPage = "";
 
   React.useEffect(() => {
     if (window.location.pathname !== '/') {

@@ -1,7 +1,6 @@
 import React from 'react'
 import FloatingNav from '../../FloatingNav'
 import Footer from '../../components/Footer/Footer'
-import { GetDuration } from '../../utils';
 import Question from '../../components/Question';
 import Answer from '../../components/Answer';
 import NotCompleted from '../../components/NotCompleted';
@@ -9,9 +8,6 @@ import ScrollFadeDiv from '../../components/ScrollFadeDiv';
 
 
 const Kenroz: React.FC = () => {
-  const startDate = "January 2022";
-  const endDate = "May 2023";
-
   return (
     <div className='custom-grid'>
       <div className="col-span-1"></div>
@@ -23,7 +19,6 @@ const Kenroz: React.FC = () => {
           <div>
             <h1 className='text-4xl font-bold'>Kenroz ~ School Management</h1>
             <p className='text-lightTextColor'>
-              {/* {startDate} - {endDate} | {GetDuration(startDate, endDate)} */}
               Full Stack Developer
             </p>
           </div>
