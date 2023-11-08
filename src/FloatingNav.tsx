@@ -3,7 +3,11 @@ import SocialMediaButton from './pages/Home/Components/SocialMediaButton';
 import { Link } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io'
 
-const FloatingNav: React.FC = () => {
+type FloatingNavProps = {
+  noBackButton?: boolean;
+};
+
+const FloatingNav: React.FC<FloatingNavProps> = ({ noBackButton }) => {
   const [showNavbar, setShowNavbar] = React.useState(false);
 
   React.useEffect(() => {
@@ -21,22 +25,20 @@ const FloatingNav: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
       className={`
-        fixed flex items-center p-2 w-full lg:w-[39.15%] top-5 bg-opacity-25 backdrop-blur-lg bg-cardBgHover rounded-xl shadow-md z-40 transform transition-transform duration-300 ease-in-out 
+        fixed flex items-center p-2  w-full lg:w-[39.15%] top-5 bg-opacity-25 backdrop-blur-lg bg-cardBgHover rounded-xl shadow-md z-40 transform transition-transform duration-300 ease-in-out 
         ${showNavbar ? "" : "-translate-y-[300px]"}
       `}
     >
       <nav className="container mx-auto flex justify-between items-center">
         <div className='flex items-center gap-2'>
-          <Link to="/"><IoIosArrowBack /></Link>
+
+          {!noBackButton && <Link to="/"><IoIosArrowBack /></Link>}
           <Link to="/" title='View Home Page'>
             <div className="hover:scale-105 transition-all duration-200 hover:shadow-lg rounded-full bg-gradient-to-tl from-purple/60 to-pink/60 p-[1.5px]">
               <div className="rounded-full p-px h-[38px] w-[38px]">
@@ -46,7 +48,7 @@ const FloatingNav: React.FC = () => {
           </Link>
         </div>
 
-        <div className='flex items-center gap-6'>
+        <div className='flex items-center gap-6 sm:mr-0 mr-10'>
           <SocialMediaButton type="linkedin" label='Linkedin' small />
           <SocialMediaButton type="github" label='Github' small />
         </div>

@@ -5,7 +5,7 @@ const NotCompleted: React.FC = () => {
     <div className='px-3 mt-20'>
       <hr />
       <p className='text-lightTextColor text-sm'>
-        Please be advised: This page is in active development. We encourage you to revisit shortly for its finalized content.
+        Note: This page is currently being updated. Check back soon to see the new content.
       </p>
     </div>
   )

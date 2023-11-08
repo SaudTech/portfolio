@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       <div className="col-span-1"></div>
       <div className="col-span-1"></div>
       <div className="col-span-1 flex flex-col gap-8">
-        <FloatingNav />
+        <FloatingNav noBackButton={true} />
 
         <div ref={ref} className={`transition-opacity duration-300 ${inView ? 'opacity-100' : 'opacity-0'}`}>
           <Introduction />
