@@ -2,9 +2,9 @@ import React from 'react'
 import FloatingNav from '../../FloatingNav'
 import Footer from '../../components/Footer/Footer'
 import { GetDuration } from '../../utils';
-import NotCompleted from '../../components/NotCompleted';
 import ScrollFadeDiv from '../../components/ScrollFadeDiv';
 import Question from '../../components/Question';
+import NotCompleted from '../../components/NotCompleted';
 
 
 const Vizzhy: React.FC = () => {
@@ -14,7 +14,9 @@ const Vizzhy: React.FC = () => {
   return (
     <div className='custom-grid'>
       <div className="col-span-1"></div>
-      <div className="col-span-1"><NotCompleted /></div>
+      <div className="col-span-1">
+        <NotCompleted />
+      </div>
       <div className="col-span-1 flex flex-col gap-8">
         <FloatingNav />
 

@@ -3,7 +3,7 @@ import { VscCopy } from 'react-icons/vsc';
 import { toast } from 'react-toastify';
 
 const Footer: React.FC = () => {
-  const email: string = "Saaud266@gmail.com";
+  const email: string = "SaudZubedi26@gmail.com";
   const copy_email = () => {
     navigator.clipboard.writeText(email);
     toast.success("Email Copied!", {

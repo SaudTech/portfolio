@@ -33,19 +33,21 @@ const Introduction: React.FC = () => {
         <div>
           <h1 className="text-3xl font-medium text-white sm:text-4xl">Saud</h1>
           <h2 className="align-middle text-lg leading-6 text-rose-100/50">
-            <span className="hidden sm:inline">Developer</span>
-            {/* <span className="inline sm:hidden" title="Developer Experience">DX</span>  */}
-            {" "} at <span className="font-medium text-rose-100/70">
-              <span className="mr-px align-middle">
-                {/* <span className="-my-2 inline-block text-[24px]">▲</span> */}
-                <span className="-my-2 inline-block text-[24px]">
-                  <img alt="Vizzhy Logo" src="https://res.cloudinary.com/dafq69nvu/image/upload/v1694063430/vizzhy-logo_drcojp.png" className='mb-1' width={26} height={26} />
+            <span className="">Developer</span>
+            {" "} at {" "}
+            <a href="https://vizzhy.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              <span className="font-medium text-rose-100/70">
+                <span className="mr-px align-middle">
+                  {/* <span className="-my-2 inline-block text-[24px]">▲</span> */}
+                  <span className="-my-2 inline-block text-[24px]">
+                    <img alt="Vizzhy Logo" src="https://res.cloudinary.com/dafq69nvu/image/upload/v1694063430/vizzhy-logo_drcojp.png" className='mb-1' width={26} height={26} />
+                  </span>
+                </span>
+                <span className='company-name-gradient-text'>
+                  Vizzhy
                 </span>
               </span>
-              <span className='company-name-gradient-text'>
-              Vizzhy
-              </span>
-            </span>
+            </a>
           </h2>
         </div>
       </div>
