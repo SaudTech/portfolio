@@ -4,7 +4,7 @@ const WorkList: Work[] = [
   {
     title: "Vizzhy ~ Healhcare",
     from: "June 2023",
-    to: "Present",
+    to: "November 2023",
     position: "Developer",
     description: "A dedicated health platform for diabetes patients, built with React. Features like ASR elevate the user experience, making interactions intuitive. A collaborative project aimed at revolutionizing patient care.",
     url: "vizzhy"
