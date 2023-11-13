@@ -13,10 +13,6 @@ const Home: React.FC = () => {
   });
 
 
-  React.useEffect(() => {
-    document.title = 'Saud | Developer at Vizzhy'
-  }, [])
-
   return (
     <div>
 
