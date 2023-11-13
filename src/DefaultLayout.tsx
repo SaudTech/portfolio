@@ -6,10 +6,10 @@ const DefaultLayout: React.FC = () => {
   return (
     <div>
       <svg className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light" width="100%" height="100%"><filter id="pedroduarteisalegend"><feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"></feTurbulence></filter><rect width="100%" height="100%" filter="url(#pedroduarteisalegend)"></rect></svg>
-      <div className='pt-48 pb-8'>
+      <div className='pt-48 pb-8 z-20 relative max-w-[150rem] mx-auto'>
         <Outlet />
       </div>
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div className="pointer-events-none fixed z-0 inset-0 overflow-hidden">
         <div
           className="
           h-full

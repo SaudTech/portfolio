@@ -1,7 +1,9 @@
 import React from 'react';
 import { RoughNotation } from 'react-rough-notation';
 import SocialMediaButton from './SocialMediaButton';
-
+import {
+  BiLogoReact
+} from 'react-icons/bi';
 
 const Introduction: React.FC = () => {
   const [showWorkspace, setShowWorkspace] = React.useState(false);
@@ -32,13 +34,12 @@ const Introduction: React.FC = () => {
         </div>
         <div>
           <h1 className="text-3xl font-medium text-white sm:text-4xl">Saud</h1>
-          <h2 className="align-middle text-lg leading-6 text-rose-100/50">
+          {/* <h2 className="align-middle text-lg leading-6 text-rose-100/50">
             <span className="">Developer</span>
             {" "} at {" "}
             <a href="https://vizzhy.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
               <span className="font-medium text-rose-100/70">
                 <span className="mr-px align-middle">
-                  {/* <span className="-my-2 inline-block text-[24px]">▲</span> */}
                   <span className="-my-2 inline-block text-[24px]">
                     <img alt="Vizzhy Logo" src="https://res.cloudinary.com/dafq69nvu/image/upload/v1694063430/vizzhy-logo_drcojp.png" className='mb-1' width={26} height={26} />
                   </span>
@@ -48,6 +49,9 @@ const Introduction: React.FC = () => {
                 </span>
               </span>
             </a>
+          </h2> */}
+          <h2 className="align-middle text-lg leading-6 text-rose-100/50">
+            <span className="flex items-center gap-2"><BiLogoReact size="25" color="#01D8FE" /> React Developer</span>
           </h2>
         </div>
       </div>

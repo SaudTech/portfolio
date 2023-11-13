@@ -1,0 +1,19 @@
+/* .hover-target:hover .slide-box {
+  transform: translateY(0);
+}
+
+.slide-box {
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+} */
+.hover-target:hover .slide-box {
+  opacity: 1;
+}
+
+.slide-box {
+  opacity: 0;
+}
+
+.hover-target:hover .hover-translate {
+  transform: translateY(-10px);
+}
