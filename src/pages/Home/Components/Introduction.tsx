@@ -35,7 +35,7 @@ const Introduction: React.FC = () => {
         </div>
         <div>
           <h1 className="text-3xl font-medium text-white sm:text-4xl">Saud Zubedi</h1>
-          <h2 className="align-middle text-lg leading-6 text-rose-100/50">
+          {/* <h2 className="align-middle text-lg leading-6 text-rose-100/50">
             <span className="">Developer</span>
             {" "} at {" "}
             <a href="https://vizzhy.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
@@ -50,7 +50,7 @@ const Introduction: React.FC = () => {
                 </span>
               </span>
             </a>
-          </h2>
+          </h2> */}
           <h2 className="align-middle text-lg leading-6 text-rose-100/50">
             <span className="flex items-center gap-2"><BiLogoReact size="25" title="React.js" /> React.js and <BiLogoVuejs size="25" title="Vue.js" />  Vue.js Developer</span>
           </h2>
