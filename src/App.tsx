@@ -6,7 +6,7 @@ import {
 import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home/Home'
 import DefaultLayout from "./DefaultLayout";
-import Project from "./pages/Project/index";
+import CompanyProjects from "./pages/CompanyProjects";
 import Loader from "./components/Loader";
 import React from "react";
 import { ToastContainer } from 'react-toastify';
@@ -22,10 +22,11 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/vizzhy" element={<Project.Vizzhy />} />
+            <Route path="/:companyName" element={<CompanyProjects />} />
+            {/* <Route path="/vizzhy" element={<Project.Vizzhy />} />
             <Route path="/drvoxel" element={<Project.DrVoxel />} />
             <Route path="/emvive" element={<Project.Emvive />} />
-            <Route path="/kenroz" element={<Project.Kenroz />} />
+            <Route path="/kenroz" element={<Project.Kenroz />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>

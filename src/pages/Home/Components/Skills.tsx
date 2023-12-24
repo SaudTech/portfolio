@@ -14,7 +14,6 @@ import {
   BiLogoCss3,
   BiLogoFirebase,
 } from 'react-icons/bi';
-import SkillsCard from './SkillsCard';
 
 interface Icon {
   src: string;
@@ -108,27 +107,8 @@ const Skills: React.FC = () => {
     return () => clearInterval(scrollInterval);
   }, [iconWidth, icons.length]);
 
-  const list = [
-    {
-      title: 'Voice-Enabled Interactive Features',
-      description: 'Proficient in implementing Speech-to-Text, Text-to-Speech, Speech Translation, and Speech Recognition using Azure AI, enhancing applications with advanced voice-interaction features.',
-    },
-    {
-      title: 'Full-Stack Web Development',
-      description: 'Expertise in Responsive Web Design and Performance Optimization, ensuring an optimal user experience across devices and efficient application performance.',
-    },
-    {
-      title: 'Advanced API and Data Integration',
-      description: 'Skilled in API Integration using Axios and managing Real-Time Data with technologies like Socket.io and Firebase, for dynamic and interactive web applications.',
-    },
-    {
-      title: 'Web Security and Compatibility',
-      description: 'Knowledgeable in implementing Security Best Practices and ensuring Cross-Browser Compatibility, maintaining secure and consistent user experiences across various platforms.',
-    },
-  ]
   return (
     <div>
-
       <div className='text-center max-w-2xl mx-auto'>
         <div ref={iconsContainerRef} className="icons-container flex flex-nowrap gap-8">
           {doubledIcons.map((icon: Icon, index: number) => (
@@ -140,17 +120,6 @@ const Skills: React.FC = () => {
           ))}
         </div>
       </div>
-
-      <div className='grid max-w-[100rem] mx-auto my-10 grid-cols-2 gap-2 place-items-center' style={{ padding: "0 15rem" }}>
-        {
-          list.map(({ title, description }) => (
-            <React.Fragment key={title}>
-              <SkillsCard title={title} description={description} />
-            </React.Fragment>
-          ))
-        }
-      </div>
-
     </div>
   )
 
