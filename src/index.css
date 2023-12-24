@@ -34,9 +34,9 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: #B0B0B0; /* Adjust color as per your preference */
   border-radius: 4px; /* You can adjust the border-radius for rounded corners */
-  &:hover {
-    background-color: #A0A0A0; /* Color when hovering over the thumb */
-  }
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #A0A0A0; /* Color when hovering over the thumb */
 }
 
 body {

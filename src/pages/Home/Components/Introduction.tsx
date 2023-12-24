@@ -2,7 +2,7 @@ import React from 'react';
 import { RoughNotation } from 'react-rough-notation';
 import SocialMediaButton from './SocialMediaButton';
 import {
-  BiLogoReact
+  BiLogoReact, BiLogoVuejs
 } from 'react-icons/bi';
 
 const Introduction: React.FC = () => {
@@ -51,7 +51,7 @@ const Introduction: React.FC = () => {
             </a>
           </h2> */}
           <h2 className="align-middle text-lg leading-6 text-rose-100/50">
-            <span className="flex items-center gap-2"><BiLogoReact size="25" color="#01D8FE" /> React Developer</span>
+            <span className="flex items-center gap-2"><BiLogoReact size="25" title="React.js" /> React.js and <BiLogoVuejs size="25" title="Vue.js" />  Vue.js Developer</span>
           </h2>
         </div>
       </div>
