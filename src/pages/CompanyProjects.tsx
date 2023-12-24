@@ -5,6 +5,7 @@ import WorkListInterface from './Home/Constant/WorkListInterface';
 import FloatingNav from '../FloatingNav';
 import ScrollFadeDiv from '../components/ScrollFadeDiv';
 import { GetDuration } from '../utils';
+import Footer from '../components/Footer/Footer';
 const CompanyProjects = () => {
 
   const companyName = useLocation().pathname.split('/')[1];
@@ -68,6 +69,8 @@ const CompanyProjects = () => {
             ))
           }
         </>}
+
+        <Footer />
       </div>
 
       <div className="col-span-1"></div>
