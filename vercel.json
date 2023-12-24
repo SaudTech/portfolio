@@ -6,28 +6,5 @@
     { "source": "/(.*)", "headers": [{ "key": "X-Frame-Options", "value": "DENY" }] }
   ],
   "cleanUrls": true,
-  "trailingSlash": false,
-  "securityHeaders": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "https://chatgpt.com"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
-        },
-        {
-          "key": "Access-Control-Expose-Headers",
-          "value": "Content-Length,Content-Range"
-        }
-      ]
-    }
-  ]
+  "trailingSlash": false
 }
