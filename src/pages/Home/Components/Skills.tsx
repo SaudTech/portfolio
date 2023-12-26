@@ -20,7 +20,9 @@ interface Icon {
   alt: string;
   className?: string | undefined;
   link: string;
+  iconHoverColor?: string;
 }
+
 
 const Skills: React.FC = () => {
 
@@ -28,7 +30,8 @@ const Skills: React.FC = () => {
     {
       src: BiLogoReact,
       alt: "React",
-      link: "https://react.dev/"
+      link: "https://react.dev/",
+      iconHoverColor: '#000'
     },
     {
       src: BiLogoRedux,
@@ -109,7 +112,8 @@ const Skills: React.FC = () => {
 
   return (
     <div>
-      <div className='text-center max-w-2xl mx-auto'>
+      <h1 className='text-4xl font-bold mx-auto'>Skills</h1>
+      <div className='text-center max-w-2xl mt-2  mx-auto'>
         <div ref={iconsContainerRef} className="icons-container flex flex-nowrap gap-8">
           {doubledIcons.map((icon: Icon, index: number) => (
             <a href={icon.link} key={index} target="_blank" rel="noopener noreferrer" title={icon.alt} ref={index === 0 ? iconRef : null}>
@@ -120,9 +124,30 @@ const Skills: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* <div className="mt-10 box__container">
+        {
+          icons.map((_, index) => (
+              <div className="grid__box" key={index}>
+                <div className='h-full m-3 rounded-lg flex flex-col justify-center items-center'>
+                  {
+                    React.createElement(_.src, { size: 40, title: _.alt })
+                  }
+                  <span className='text-white text-lg mt-2'>{_.alt}</span>
+                </div>
+                <span className='GridSection_joint__3AfU7 GridSection_bl__6vURw'></span>
+                <span className='GridSection_joint__3AfU7 GridSection_br__AUY5M'></span>
+                <span className='GridSection_joint__3AfU7 GridSection_tr__NMCvH'></span>
+                <span className='GridSection_joint__3AfU7 GridSection_tl__AnAX2'></span>
+              </div>
+            )
+          )
+        }
+      </div> */}
     </div>
   )
+};
 
-}
+
 
 export default Skills;

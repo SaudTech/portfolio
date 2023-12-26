@@ -1,9 +1,10 @@
 import React from 'react';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import { BiLogoUpwork } from "react-icons/bi";
 import "../index.css";
 
 interface SocialMediaButtonProps {
-  type: 'linkedin' | 'github';
+  type: 'linkedin' | 'github' | 'upwork';
   label: string;
   small?: boolean;
 }
@@ -12,7 +13,8 @@ interface SocialMediaButtonProps {
 const SocialMediaButton: React.FC<SocialMediaButtonProps> = ({ type, label, small }) => {
   const links: Record<string, string> = {
     linkedin: 'https://www.linkedin.com/in/saudzubedi/',
-    github: 'https://github.com/SaudTech'
+    github: 'https://github.com/SaudTech',
+    upwork: 'https://www.upwork.com/freelancers/~01687c5690d704c01c',
   };
   const getIcon = () => {
     switch (type) {
@@ -20,6 +22,8 @@ const SocialMediaButton: React.FC<SocialMediaButtonProps> = ({ type, label, smal
         return BsLinkedin;
       case 'github':
         return BsGithub;
+      case 'upwork':
+        return BiLogoUpwork;
       default:
         return null;
     }

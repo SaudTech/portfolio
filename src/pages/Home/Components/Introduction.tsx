@@ -35,22 +35,6 @@ const Introduction: React.FC = () => {
         </div>
         <div>
           <h1 className="text-3xl font-medium text-white sm:text-4xl">Saud Zubedi</h1>
-          {/* <h2 className="align-middle text-lg leading-6 text-rose-100/50">
-            <span className="">Developer</span>
-            {" "} at {" "}
-            <a href="https://vizzhy.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              <span className="font-medium text-rose-100/70">
-                <span className="mr-px align-middle">
-                  <span className="-my-2 inline-block text-[24px]">
-                    <img alt="Vizzhy Logo" src="https://res.cloudinary.com/dafq69nvu/image/upload/v1694063430/vizzhy-logo_drcojp.png" className='mb-1' width={26} height={26} />
-                  </span>
-                </span>
-                <span className='company-name-gradient-text'>
-                  Vizzhy
-                </span>
-              </span>
-            </a>
-          </h2> */}
           <h2 className="align-middle text-lg leading-6 text-rose-100/50">
             <span className="flex items-center gap-2"><BiLogoReact size="25" title="React.js" /> React.js and <BiLogoVuejs size="25" title="Vue.js" />  Vue.js Developer</span>
           </h2>
@@ -64,7 +48,7 @@ const Introduction: React.FC = () => {
       </div>
 
       <div className='w-full flex gap-3 mt-8'>
-        <SocialMediaButton type="linkedin" label='Linkedin' />
+        <SocialMediaButton type="upwork" label='Upwork' />
         <SocialMediaButton type="github" label='Github' />
       </div>
     </div>

@@ -9,7 +9,7 @@ const Work: React.FC = () => {
       <h1 className='text-4xl font-bold mx-auto'>Work Experience</h1>
       {
         WorkData.map((v) => (
-          <Link to={"/" + v.companyName} className='bg-black/30 rounded-md p-3 cursor-pointer'>
+          <Link key={v.companyName} to={"/" + v.companyName} className='bg-black/30 rounded-md p-3 cursor-pointer'>
             <div className='z-20 rounded-md'>
               <div className='flex justify-between items-center'>
                 <div>
