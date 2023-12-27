@@ -29,7 +29,7 @@ const Introduction: React.FC = () => {
         <div className="rounded-full bg-gradient-to-tl from-purple/30 to-pink/30 shadow-lg p-[3px]">
           <div className="rounded-full bg-gradient-to-tl from-purple to-pink shadow-lg p-[3px]">
             <div className="rounded-full p-px h-[64px] w-[64px]">
-              <img alt="A photo of Saud" src="https://res.cloudinary.com/dafq69nvu/image/upload/v1694073652/profile-picture.jpg" width="64" height="64" decoding="async" data-nimg="1" className="rounded-full" style={{ color: "transparent" }} />
+              <img alt="A photo of Saud" src="https://res.cloudinary.com/dafq69nvu/image/upload/v1703667893/profile-picture.png" width="64" height="64" decoding="async" data-nimg="1" className="rounded-full" style={{ color: "transparent" }} />
             </div>
           </div>
         </div>
