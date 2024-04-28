@@ -46,11 +46,6 @@ export const StickyScroll = ({
     "var(--black)",
     "var(--neutral-900)",
   ];
-  const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
-  ];
   return (
     <motion.div
       animate={{
@@ -104,7 +99,6 @@ export const StickyScroll = ({
       </div>
       <motion.div
         animate={{
-          // background: linearGradients[activeCard % linearGradients.length],
           backgroundColor:
             content[activeCard].cardBackgroundColor ?? "transparent",
         }}

@@ -1,15 +1,9 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
 import Introduction from "./Components/Introduction";
 import Projects from "./Components/Projects";
 import About from "./Components/About";
 
 const Home: React.FC = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   return (
     <div className="pb-5">
       <Introduction />

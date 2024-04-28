@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "./components/ui/hero-highlight";
+import { HeroHighlight } from "./components/ui/hero-highlight";
 import Footer from "./components/Footer/Footer";
 
 const DefaultLayout: React.FC = () => {
