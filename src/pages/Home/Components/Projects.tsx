@@ -21,7 +21,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <img
-          src="src/assets/vizzhy_logo.jpg"
+          src="https://res.cloudinary.com/dafq69nvu/image/upload/v1714333999/Vizzhy-Logo.jpg"
           className="h-full w-full object-contain"
           alt="linear board demo"
         />
@@ -46,7 +46,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <img
-          src="src/assets/wellyfe.jpg"
+          src="https://res.cloudinary.com/dafq69nvu/image/upload/v1714334001/Doctor-Wellyfe.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -73,7 +73,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <img
-          src="src/assets/zatca_logo.svg"
+          src="https://res.cloudinary.com/dafq69nvu/image/upload/v1714333999/Zatca-Emvive.svg"
           width={300}
           height={300}
           className="h-full w-full object-contain"
