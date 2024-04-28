@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Fira Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   font-weight: 300;
   line-height: 1.5;
 
   color-scheme: light dark;
-  color: #EDD2D7;
-  background-color: #1C1816;
+  color: #edd2d7;
+  background-color: #1c1816;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,30 +23,30 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 6px; /* Adjust width as needed */
-  height: 6px; /* Adjust height as needed */
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #20211B; /* Adjust the color as per your preference */
+  background: #20211b;
 }
 
-/* For Webkit browsers */
 ::-webkit-scrollbar-thumb {
-  background-color: #B0B0B0; /* Adjust color as per your preference */
-  border-radius: 4px; /* You can adjust the border-radius for rounded corners */
+  background-color: #b0b0b0;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #A0A0A0; /* Color when hovering over the thumb */
+  background-color: #a0a0a0;
 }
 
-body {
-  scrollbar-width: thin; /* or "auto" */
-  scrollbar-color: #B0B0B0 #20211B; /* thumb and track color */
+body,
+div {
+  scrollbar-width: thin;
+  scrollbar-color: #b0b0b0 #20211b;
 }
 
 ::selection {
-  background-color: #A057E3;
+  background-color: #a057e3;
   color: white;
 }
 
@@ -59,8 +60,6 @@ body {
     }
   }
 }
-
-
 
 .fade-enter {
   opacity: 0.01;

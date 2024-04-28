@@ -23,10 +23,6 @@ const App: React.FC = () => {
           <Route path="/" element={<DefaultLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/:companyName" element={<CompanyProjects />} />
-            {/* <Route path="/vizzhy" element={<Project.Vizzhy />} />
-            <Route path="/drvoxel" element={<Project.DrVoxel />} />
-            <Route path="/emvive" element={<Project.Emvive />} />
-            <Route path="/kenroz" element={<Project.Kenroz />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
