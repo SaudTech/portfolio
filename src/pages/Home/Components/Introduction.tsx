@@ -7,7 +7,7 @@ import useResume from "../../../components/useResume";
 
 const Introduction: React.FC = () => {
   const [visibleIndex, setVisibleIndex] = React.useState(0);
-  const { triggerDownload, ResumeDownloadButton } = useResume(
+  const { ResumeDownloadButton } = useResume(
     "SAUD_ZUBEDI_RESUME.pdf"
   );
 
