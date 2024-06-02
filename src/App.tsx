@@ -11,6 +11,7 @@ import Loader from "./components/Loader";
 import React from "react";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Resume from "./pages/Resume";
 
 
 const App: React.FC = () => {
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume />} />
             <Route path="/:companyName" element={<CompanyProjects />} />
           </Route>
         </Routes>

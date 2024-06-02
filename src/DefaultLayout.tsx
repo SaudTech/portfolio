@@ -20,9 +20,9 @@ const DefaultLayout: React.FC = () => {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mx-auto"
+        className="text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mx-auto flex flex-col min-h-screen"
       >
-        <div className="z-20 relative max-w-[150rem] mx-auto">
+        <div className="z-20 relative max-w-[150rem] mx-auto flex-grow">
           <Outlet />
         </div>
         <Footer />

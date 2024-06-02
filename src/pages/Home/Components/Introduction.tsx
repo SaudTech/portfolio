@@ -3,10 +3,13 @@ import { RoughNotation } from "react-rough-notation";
 import SocialMediaButton from "./SocialMediaButton";
 import { BiLogoMongodb, BiLogoNodejs, BiLogoReact } from "react-icons/bi";
 import { SiExpress } from "react-icons/si";
-import { Button } from "../../../components/ui/moving-border";
+import useResume from "../../../components/useResume";
 
 const Introduction: React.FC = () => {
   const [visibleIndex, setVisibleIndex] = React.useState(0);
+  const { triggerDownload, ResumeDownloadButton } = useResume(
+    "SAUD_ZUBEDI_RESUME.pdf"
+  );
 
   React.useEffect(() => {
     const maxIndex = 5;
@@ -84,15 +87,7 @@ const Introduction: React.FC = () => {
       </div>
 
       <div className="w-full text-center">
-        <Button
-          borderRadius="5rem"
-          duration={4000}
-          containerClassName="w-60 h-12"
-          borderClassName="bg-gradient-to-tl from-purple to-pink opacity-60 h-10 w-16"
-          className="bg-white dark:bg-transparent text-md font-bold text-black dark:text-white dark:border-slate-800"
-        >
-          Download Resume
-        </Button>
+        <ResumeDownloadButton />
 
         <div className="flex justify-center text-xs gap-3 mt-5">
           <SocialMediaButton type="upwork" label="Upwork" />
