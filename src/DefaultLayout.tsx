@@ -1,30 +1,34 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { motion } from "framer-motion";
+import { HeroHighlight } from "./components/ui/hero-highlight";
+import Footer from "./components/Footer/Footer";
 
 const DefaultLayout: React.FC = () => {
-
   return (
-    <div>
-      <svg className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light" width="100%" height="100%"><filter id="pedroduarteisalegend"><feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"></feTurbulence></filter><rect width="100%" height="100%" filter="url(#pedroduarteisalegend)"></rect></svg>
-      <div className='pt-48 pb-8 z-20 relative max-w-[150rem] mx-auto'>
-        <Outlet />
-      </div>
-      <div className="pointer-events-none fixed z-0 inset-0 overflow-hidden">
-        <div
-          className="
-          h-full
-          bg-[url('https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9')]
-          bg-top
-          bg-no-repeat
-          opacity-[0.3]
-          will-change-transform
-          "
-          style={{ transform: "translateY(0px)" }}
-        ></div>
-      </div>
-    </div>
-  )
-}
+    <HeroHighlight>
+      <motion.h1
+        initial={{
+          opacity: 0,
+          y: 20,
+        }}
+        animate={{
+          opacity: 1,
+          y: [20, -5, 0],
+        }}
+        transition={{
+          duration: 0.5,
+          ease: [0.4, 0.0, 0.2, 1],
+        }}
+        className="text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mx-auto flex flex-col min-h-screen"
+      >
+        <div className="z-20 relative max-w-[150rem] mx-auto flex-grow">
+          <Outlet />
+        </div>
+        <Footer />
+      </motion.h1>
+    </HeroHighlight>
+  );
+};
 
-export default DefaultLayout
+export default DefaultLayout;
