@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const DefaultLayout: React.FC = () => {
   return (
     <>
-      <Link to="https://dev.to/saudtech/ultimate-guide-securing-your-expressjs-app-for-maximum-protection-3khe" target="_blank">
+      <Link to="https://dev.to/saudtech/ultimate-guide-securing-your-expressjs-app-for-maximum-protection-3khe" target="_blank" className="md:block hidden">
         <div className="py-2 w-full hover:cursor-pointer bg-gray-900 text-white">
           <div className=" text-lg flex w-full items-center justify-center gap-3 hover:scale-95 transition-all duration-300">
             <span className="text-sm opacity-70">Latest Blog:</span> Ultimate

@@ -12,11 +12,10 @@ const socialLinks = [
     name: "LinkedIn",
     url: "https://linkedin.com/in/saudzubedi",
     icon: "→",
-  }
+  },
 ];
 
 const Introduction: React.FC = () => {
-
   return (
     <div className="w-full mt-16 max-w-7xl mx-auto px-4">
       <div className="grid md:grid-cols-[2fr,1fr] gap-12 items-center">
@@ -33,14 +32,26 @@ const Introduction: React.FC = () => {
 
             <h1 className="text-5xl font-bold tracking-tight">
               Hi, I'm{" "}
-              <RoughNotation
-                type="highlight"
-                color="rgba(59, 130, 246, 0.2)"
-                animationDelay={300}
-                show={true}
-              >
-                <span className="text-blue-400">Saud Zubedi</span>
-              </RoughNotation>
+              <span className="md:block hidden">
+                <RoughNotation
+                  type="highlight"
+                  color="rgba(59, 130, 246, 0.2)"
+                  animationDelay={300}
+                  show={true}
+                >
+                  <span className="text-blue-400">Saud Zubedi</span>
+                </RoughNotation>
+              </span>
+              <span className="md:hidden block">
+                <RoughNotation
+                  type="underline"
+                  color="#60A5FA"
+                  animationDelay={300}
+                  show={true}
+                >
+                  <span className="text-blue-400">Saud Zubedi</span>
+                </RoughNotation>
+              </span>
             </h1>
 
             <h2 className="text-2xl text-neutral-400">
@@ -66,17 +77,23 @@ const Introduction: React.FC = () => {
               show={true}
             >
               3+ years of experience
-            </RoughNotation>{" "} in healthcare and fintech. I kickstarted my
-            journey during the pandemic, focusing on building high-performance
-            web applications using modern tech and best practices.
+            </RoughNotation>{" "}
+            in healthcare and fintech. I kickstarted my journey during the
+            pandemic, focusing on building high-performance web applications
+            using modern tech and best practices.
           </p>
 
           <div className="flex flex-wrap gap-3">
-            {["React", "Express.js", "TypeScript", "Node.js", "MongoDB", "Azure"].map(
-              (tech) => (
-                <TechBadge key={tech} tech={tech} />
-              )
-            )}
+            {[
+              "React",
+              "Express.js",
+              "TypeScript",
+              "Node.js",
+              "MongoDB",
+              "Azure",
+            ].map((tech) => (
+              <TechBadge key={tech} tech={tech} />
+            ))}
           </div>
 
           <div className="flex items-center gap-4 pt-4">
@@ -97,31 +114,33 @@ const Introduction: React.FC = () => {
           <div className="pt-8">
             <p
               onClick={() => {
-                fetch("https://res.cloudinary.com/dafq69nvu/image/upload/v1742241624/Resume.pdf")
-                .then(response => response.blob())
-                .then(blob => {
-                  const url = window.URL.createObjectURL(new Blob([blob]));
-                  const a = document.createElement('a');
-                  a.href = url;
-                  a.download = "Saud_Zubedi_Resume.pdf";
-                  a.click();
-                });
+                fetch(
+                  "https://res.cloudinary.com/dafq69nvu/image/upload/v1742241624/Resume.pdf"
+                )
+                  .then((response) => response.blob())
+                  .then((blob) => {
+                    const url = window.URL.createObjectURL(new Blob([blob]));
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = "Saud_Zubedi_Resume.pdf";
+                    a.click();
+                  });
               }}
               className="group inline-flex items-center gap-2 text-neutral-300 hover:text-blue-400 transition-colors duration-300 text-lg"
             >
               <span className="border-b-2 border-neutral-700 group-hover:border-blue-400 transition-colors duration-300">
                 Download Resume
               </span>
-              <svg 
-                className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" 
-                fill="none" 
-                viewBox="0 0 24 24" 
+              <svg
+                className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
