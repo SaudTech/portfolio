@@ -1,116 +1,159 @@
 import React from "react";
 import { RoughNotation } from "react-rough-notation";
-import SocialMediaButton from "./SocialMediaButton";
-import { BiLogoMongodb, BiLogoNodejs, BiLogoReact } from "react-icons/bi";
-import { SiExpress } from "react-icons/si";
-import useResume from "../../../components/useResume";
+import TechBadge from "../../../components/TechBadge";
+
+const socialLinks = [
+  {
+    name: "GitHub",
+    url: "https://github.com/SaudTech",
+    icon: "→",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com/in/saudzubedi",
+    icon: "→",
+  }
+];
 
 const Introduction: React.FC = () => {
-  const [visibleIndex, setVisibleIndex] = React.useState(0);
-  const { ResumeDownloadButton } = useResume(
-    "SAUD_ZUBEDI_RESUME.pdf"
-  );
-
-  React.useEffect(() => {
-    const maxIndex = 5;
-    const interval = setInterval(() => {
-      setVisibleIndex((currentIndex) => {
-        if (currentIndex < maxIndex) {
-          return currentIndex + 1;
-        }
-        clearInterval(interval);
-        return currentIndex;
-      });
-    }, 700);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
-    <div className="flex flex-col gap-7 text-2xl justify-center relative h-[calc(100vh-2rem)]">
-      <div>
-        <div className="flex items-center justify-center space-x-6">
-          <div className="rounded-full bg-gradient-to-tl from-purple/30 to-pink/30 shadow-lg p-[3px]">
-            <div className="rounded-full bg-gradient-to-tl from-purple to-pink shadow-lg p-[3px]">
-              <div className="rounded-full p-px h-[64px] w-[64px]">
-                <img
-                  alt="A photo of Saud"
-                  src="https://res.cloudinary.com/dafq69nvu/image/upload/v1703667893/profile-picture.png"
-                  width="64"
-                  height="64"
-                  decoding="async"
-                  data-nimg="1"
-                  className="rounded-full"
-                  style={{ color: "transparent" }}
-                />
-              </div>
-            </div>
-          </div>
-          <div>
-            <h1 className="text-3xl font-medium text-white sm:text-4xl">
-              Saud Zubedi
-            </h1>
-            <h2 className="align-middle text-lg leading-6 text-rose-100/50">
-              <span className="flex items-center gap-2">
-                MERN Stack Developer
+    <div className="w-full mt-16 max-w-7xl mx-auto px-4">
+      <div className="grid md:grid-cols-[2fr,1fr] gap-12 items-center">
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 text-sm opacity-80">
+              <span className="px-3 py-1 bg-neutral-800 rounded-full">
+                Frontend Developer
               </span>
+              <span className="px-3 py-1 bg-neutral-800 rounded-full">
+                Full Stack Engineer
+              </span>
+            </div>
+
+            <h1 className="text-5xl font-bold tracking-tight">
+              Hi, I'm{" "}
+              <RoughNotation
+                type="highlight"
+                color="rgba(59, 130, 246, 0.2)"
+                animationDelay={300}
+                show={true}
+              >
+                <span className="text-blue-400">Saud Zubedi</span>
+              </RoughNotation>
+            </h1>
+
+            <h2 className="text-2xl text-neutral-400">
+              <RoughNotation
+                type="bracket"
+                brackets={["left", "right"]}
+                color="#60A5FA"
+                strokeWidth={2}
+                animationDelay={800}
+                show={true}
+              >
+                Building digital experiences that matter
+              </RoughNotation>
             </h2>
           </div>
-        </div>
 
-        <div className="mt-8">
-          <p className="text-center">
-            Full stack Developer with{" "}
+          <p className="text-sm leading-relaxed opacity-90 max-w-xl">
+            Passionate software engineer with{" "}
             <RoughNotation
-              show={visibleIndex >= 1}
-              type="underline"
-              color="#8F2F70"
+              type="highlight"
+              color="rgba(59, 130, 246, 0.2)"
+              animationDelay={1200}
+              show={true}
             >
-              over 3 years
-            </RoughNotation>{" "}
-            of experience.
+              3+ years of experience
+            </RoughNotation>{" "} in healthcare and fintech. I kickstarted my
+            journey during the pandemic, focusing on building high-performance
+            web applications using modern tech and best practices.
           </p>
 
-          <h2 className="whitespace-nowrap w-full text-center mt-10">
-            <RoughNotation
-              show={visibleIndex >= 2}
-              type="underline"
-              color="#81C784"
+          <div className="flex flex-wrap gap-3">
+            {["React", "Express.js", "TypeScript", "Node.js", "MongoDB", "Azure"].map(
+              (tech) => (
+                <TechBadge key={tech} tech={tech} />
+              )
+            )}
+          </div>
+
+          <div className="flex items-center gap-4 pt-4">
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-neutral-400 hover:text-blue-400 transition-colors"
+              >
+                <span>{link.name}</span>
+                <span className="text-xs">{link.icon}</span>
+              </a>
+            ))}
+          </div>
+
+          <div className="pt-8">
+            <p
+              onClick={() => {
+                fetch("/public/resume.pdf")
+                .then(response => response.blob())
+                .then(blob => {
+                  const url = window.URL.createObjectURL(new Blob([blob]));
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = "Saud_Zubedi_Resume.pdf";
+                  a.click();
+                });
+              }}
+              className="group inline-flex items-center gap-2 text-neutral-300 hover:text-blue-400 transition-colors duration-300 text-lg"
             >
-              <BiLogoMongodb className="inline-block" /> MongoDB{" "}
-              <SiExpress className="inline-block ml-2" /> Express{" "}
-              <BiLogoReact className="inline-block ml-2" /> React{" "}
-              <BiLogoNodejs className="inline-block ml-2" /> Node{" "}
-            </RoughNotation>
-          </h2>
+              <span className="border-b-2 border-neutral-700 group-hover:border-blue-400 transition-colors duration-300">
+                Download Resume
+              </span>
+              <svg 
+                className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </p>
+          </div>
+        </div>
+
+        <div className="relative aspect-square">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg" />
+          <div className="absolute inset-0 backdrop-blur-3xl rounded-lg overflow-hidden">
+            <div className="h-full w-full bg-neutral-800/50 flex items-center justify-center">
+              <span className="text-8xl">👨‍💻</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="w-full text-center">
-        <ResumeDownloadButton />
-
-        <div className="flex justify-center text-xs gap-3 mt-5">
-          <SocialMediaButton type="upwork" label="Upwork" />
-          <SocialMediaButton type="github" label="Github" />
+      <div className="mt-16 grid grid-cols-3 gap-8 border-t border-neutral-800 pt-8">
+        <div className="space-y-2">
+          <h3 className="text-2xl font-bold">3+</h3>
+          <p className="text-sm text-neutral-400">Years of Experience</p>
+        </div>
+        <div className="space-y-2">
+          <h3 className="text-2xl font-bold">10+</h3>
+          <p className="text-sm text-neutral-400">Projects Completed</p>
         </div>
       </div>
 
-      <div className="absolute bottom-5 left-0 right-0 text-center text-xs">
-        <div className="animate-bounce">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="mx-auto h-6 w-6 text-white"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
+      <div className="mt-12 flex justify-center">
+        <div className="animate-bounce flex items-center gap-2 text-sm text-neutral-400">
+          <span>Scroll to explore</span>
+          <span>↓</span>
         </div>
       </div>
     </div>
