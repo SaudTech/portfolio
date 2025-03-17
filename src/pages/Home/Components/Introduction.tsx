@@ -97,7 +97,7 @@ const Introduction: React.FC = () => {
           <div className="pt-8">
             <p
               onClick={() => {
-                fetch("/public/resume.pdf")
+                fetch("https://res.cloudinary.com/dafq69nvu/image/upload/v1742241624/Resume.pdf")
                 .then(response => response.blob())
                 .then(blob => {
                   const url = window.URL.createObjectURL(new Blob([blob]));
