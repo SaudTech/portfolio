@@ -18,9 +18,9 @@ const skills = [
 
 const About: React.FC = () => {
   return (
-    <div className="w-full mt-16 max-w-7xl mx-auto px-4">
+    <div id="about" className="w-full mt-16 max-w-7xl mx-auto px-4">
       <div className="text-left mb-8">
-        <h2 className="text-sm uppercase tracking-wider text-neutral-400 mb-2">Introduction</h2>
+        <h2 className="text-sm uppercase tracking-wider text-neutral-300 mb-2">Introduction</h2>
         <h1 className="text-4xl font-bold">About Me</h1>
       </div>
 
@@ -52,7 +52,7 @@ const About: React.FC = () => {
             <div className="space-y-4">
               {skills.map((skillGroup) => (
                 <div key={skillGroup.category} className="space-y-2">
-                  <h4 className="text-sm text-neutral-400">{skillGroup.category}</h4>
+                  <h4 className="text-sm text-neutral-300">{skillGroup.category}</h4>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.technologies.map((tech) => (
                       <TechBadge key={tech} tech={tech} />

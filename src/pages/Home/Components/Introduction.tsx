@@ -17,7 +17,7 @@ const socialLinks = [
 
 const Introduction: React.FC = () => {
   return (
-    <div className="w-full mt-16 max-w-7xl mx-auto px-4">
+    <div id="intro" className="w-full mt-16 max-w-7xl mx-auto px-4">
       <div className="grid md:grid-cols-[2fr,1fr] gap-12 items-center">
         <div className="space-y-6">
           <div className="space-y-2">
@@ -54,7 +54,7 @@ const Introduction: React.FC = () => {
               </span>
             </h1>
 
-            <h2 className="text-2xl text-neutral-400">
+            <h2 className="text-2xl text-neutral-300">
               <RoughNotation
                 type="bracket"
                 brackets={["left", "right"]}
@@ -103,7 +103,7 @@ const Introduction: React.FC = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-neutral-400 hover:text-blue-400 transition-colors"
+                className="flex items-center gap-2 text-sm text-neutral-300 hover:text-blue-400 transition-colors"
               >
                 <span>{link.name}</span>
                 <span className="text-xs">{link.icon}</span>
@@ -112,20 +112,9 @@ const Introduction: React.FC = () => {
           </div>
 
           <div className="pt-8">
-            <p
-              onClick={() => {
-                fetch(
-                  "https://res.cloudinary.com/dafq69nvu/image/upload/v1742241624/Resume.pdf"
-                )
-                  .then((response) => response.blob())
-                  .then((blob) => {
-                    const url = window.URL.createObjectURL(new Blob([blob]));
-                    const a = document.createElement("a");
-                    a.href = url;
-                    a.download = "Saud_Zubedi_Resume.pdf";
-                    a.click();
-                  });
-              }}
+            <a
+              href="https://res.cloudinary.com/dafq69nvu/image/upload/v1742241624/Resume.pdf"
+              download
               className="group inline-flex items-center gap-2 text-neutral-300 hover:text-blue-400 transition-colors duration-300 text-lg"
             >
               <span className="border-b-2 border-neutral-700 group-hover:border-blue-400 transition-colors duration-300">
@@ -144,33 +133,32 @@ const Introduction: React.FC = () => {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </p>
+            </a>
           </div>
         </div>
 
         <div className="relative aspect-square">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg" />
-          <div className="absolute inset-0 backdrop-blur-3xl rounded-lg overflow-hidden">
-            <div className="h-full w-full bg-neutral-800/50 flex items-center justify-center">
-              <span className="text-8xl">👨‍💻</span>
-            </div>
-          </div>
+          <img
+            src="https://via.placeholder.com/400x400.png?text=Profile"
+            alt="Profile picture"
+            className="rounded-lg object-cover w-full h-full"
+          />
         </div>
       </div>
 
       <div className="mt-16 grid grid-cols-3 gap-8 border-t border-neutral-800 pt-8">
         <div className="space-y-2">
           <h3 className="text-2xl font-bold">3+</h3>
-          <p className="text-sm text-neutral-400">Years of Experience</p>
+          <p className="text-sm text-neutral-300">Years of Experience</p>
         </div>
         <div className="space-y-2">
           <h3 className="text-2xl font-bold">10+</h3>
-          <p className="text-sm text-neutral-400">Projects Completed</p>
+          <p className="text-sm text-neutral-300">Projects Completed</p>
         </div>
       </div>
 
       <div className="mt-12 flex justify-center">
-        <div className="animate-bounce flex items-center gap-2 text-sm text-neutral-400">
+        <div className="animate-bounce flex items-center gap-2 text-sm text-neutral-300">
           <span>Scroll to explore</span>
           <span>↓</span>
         </div>
