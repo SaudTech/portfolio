@@ -25,6 +25,10 @@ const content = [
           Implemented complex business logic for tax compliance, secure authentication systems,
           and advanced data visualization dashboards for financial reporting.
         </p>
+        <ul className="list-disc pl-5 space-y-1 text-sm text-neutral-300">
+          <li>Reduced invoice processing time by 30%</li>
+          <li>Served over 10k monthly users</li>
+        </ul>
         <div className="flex flex-wrap gap-2 mt-3">
           {["React", "Zatca API", "JWT", "TypeScript", "React-Charts"].map((tech) => (
             <TechBadge key={tech} tech={tech} />
@@ -67,6 +71,10 @@ const content = [
           including video conferencing between doctor and patient, and real-time chat systems. Integrated Azure Cognitive Services for speech-to-text
           and text-to-speech capabilities, enhancing accessibility and user experience.
         </p>
+        <ul className="list-disc pl-5 space-y-1 text-sm text-neutral-300">
+          <li>Implemented real-time chat and video features</li>
+          <li>Improved accessibility with speech services</li>
+        </ul>
         <div className="flex flex-wrap gap-2 mt-3">
           {["React", "Azure Speech", "Socket.io", "JWT"].map((tech) => (
             <TechBadge key={tech} tech={tech} />
@@ -115,6 +123,10 @@ const content = [
           Implemented Twilio-powered video calling and SMS notifications, built RESTful APIs
           with Express, and created interactive data visualizations for medical analytics.
         </p>
+        <ul className="list-disc pl-5 space-y-1 text-sm text-neutral-300">
+          <li>Enabled secure video consultations</li>
+          <li>Integrated SMS reminders for patients</li>
+        </ul>
         <div className="flex flex-wrap gap-2 mt-3">
           {["React", "Express", "Twilio Video", "Twilio SMS", "Node.js", "MongoDB"].map((tech) => (
             <TechBadge key={tech} tech={tech} />
@@ -139,9 +151,9 @@ const content = [
 
 const Projects: React.FC = () => {
   return (
-    <div className="w-full mt-16 max-w-7xl mx-auto px-4">
+    <div id="experience" className="w-full mt-16 max-w-7xl mx-auto px-4">
       <div className="text-left mb-12">
-        <h2 className="text-sm uppercase tracking-wider text-neutral-400 mb-2">Experience</h2>
+        <h2 className="text-sm uppercase tracking-wider text-neutral-300 mb-2">Experience</h2>
         <h1 className="text-4xl font-bold">Work History</h1>
       </div>
       <StickyScroll content={content} />

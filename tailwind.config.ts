@@ -13,7 +13,7 @@ export default {
         pink: "#B34A72",
         cardBg: "#393430",
         cardBgHover: "#3B3939",
-        lightTextColor: "#99908D",
+        lightTextColor: "#d0d0cd",
       },
       animation: {
         scroll:

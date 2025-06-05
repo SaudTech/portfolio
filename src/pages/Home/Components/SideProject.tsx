@@ -79,7 +79,7 @@ const content = [
             </svg>
           </a>
 
-          <p className="text-sm text-neutral-400">
+          <p className="text-sm text-neutral-300">
             Username: saud
             <br />
             Password: saud
@@ -168,9 +168,9 @@ const content = [
 
 const SideProjects: React.FC = () => {
   return (
-    <div className="w-full mt-16 max-w-7xl mx-auto px-4">
+    <div id="projects" className="w-full mt-16 max-w-7xl mx-auto px-4">
       <div className="text-left mb-12">
-        <h2 className="text-sm uppercase tracking-wider text-neutral-400 mb-2">
+        <h2 className="text-sm uppercase tracking-wider text-neutral-300 mb-2">
           Portfolio
         </h2>
         <h1 className="text-4xl font-bold">Side Projects</h1>

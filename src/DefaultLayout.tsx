@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { HeroHighlight } from "./components/ui/hero-highlight";
 import Footer from "./components/Footer/Footer";
 import { Link } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 
 const DefaultLayout: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const DefaultLayout: React.FC = () => {
           </div>
         </div>
       </Link>
+      <Navbar />
       <HeroHighlight>
         <motion.h1
           initial={{

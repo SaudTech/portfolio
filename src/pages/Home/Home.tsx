@@ -3,6 +3,7 @@ import Introduction from "./Components/Introduction";
 import Projects from "./Components/Projects";
 import About from "./Components/About";
 import SideProject from "./Components/SideProject";
+import Contact from "./Components/Contact";
 const Home: React.FC = () => {
   return (
     <div className="pb-5">
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
       <About />
       <Projects />
       <SideProject />
+      <Contact />
     </div>
   );
 };
