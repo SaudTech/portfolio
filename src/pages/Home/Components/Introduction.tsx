@@ -128,7 +128,7 @@ const Introduction: React.FC = () => {
               }}
               className="group inline-flex items-center gap-2 text-neutral-300 hover:text-blue-400 transition-colors duration-300 text-lg"
             >
-              <span className="border-b-2 border-neutral-700 group-hover:border-blue-400 transition-colors duration-300">
+              <span className="border-b-2 cursor-pointer border-neutral-700 group-hover:border-blue-400 transition-colors duration-300">
                 Download Resume
               </span>
               <svg
