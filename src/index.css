@@ -3,14 +3,29 @@
 @tailwind utilities;
 
 :root {
-  font-family: "Fira Sans", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  font-weight: 300;
+  --paper: 242 243 245;
+  --card: 255 255 255;
+  --ink: 20 23 28;
+  --ink-soft: 28 33 40;
+  --muted: 74 81 92;
+  --muted-2: 92 99 110;
+  --accent: 50 117 180;
+  --accent-ink: 35 88 138;
+  --on-accent: 255 255 255;
+  --tick: 196 202 210;
+  --accent-wash: rgba(70, 110, 190, 0.08);
+  --rule: rgba(20, 23, 28, 0.12);
+  --rule-soft: rgba(20, 23, 28, 0.09);
+  --rule-strong: rgba(20, 23, 28, 0.24);
+  --rule-dial: rgba(20, 23, 28, 0.18);
+
+  font-family: "IBM Plex Sans", system-ui, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   line-height: 1.5;
 
-  color-scheme: light dark;
-  color: #edd2d7;
-  background-color: #1c1816;
+  color-scheme: light;
+  color: rgb(var(--ink));
+  background-color: rgb(var(--paper));
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,63 +33,38 @@
   -webkit-text-size-adjust: 100%;
 }
 
+:root[data-theme="dark"] {
+  --paper: 14 17 22;
+  --card: 23 27 34;
+  --ink: 236 239 243;
+  --ink-soft: 213 218 225;
+  --muted: 163 170 181;
+  --muted-2: 139 147 158;
+  --accent: 109 169 231;
+  --accent-ink: 151 194 240;
+  --on-accent: 14 17 22;
+  --tick: 58 65 75;
+  --accent-wash: rgba(109, 169, 231, 0.1);
+  --rule: rgba(236, 239, 243, 0.13);
+  --rule-soft: rgba(236, 239, 243, 0.09);
+  --rule-strong: rgba(236, 239, 243, 0.26);
+  --rule-dial: rgba(236, 239, 243, 0.2);
+
+  color-scheme: dark;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #20211b;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #b0b0b0;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: #a0a0a0;
-}
-
-body,
-div {
-  scrollbar-width: thin;
-  scrollbar-color: #b0b0b0 #20211b;
-}
-
-::selection {
-  background-color: #a057e3;
-  color: white;
-}
-
-@layer utilities {
-  .custom-grid {
-    @apply grid;
-    grid-template-columns: 100%;
-    padding: 0 1rem;
-    @screen lg {
-      grid-template-columns: 15% 15% 40% 15% 15%;
-    }
+/* Snap one section per screen only where the dial is shown and each section fits. */
+@media (min-width: 1280px) and (min-height: 720px) {
+  html.snap-page {
+    scroll-snap-type: y mandatory;
   }
 }
 
-.fade-enter {
-  opacity: 0.01;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms ease-in;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+::selection {
+  background-color: rgb(var(--accent));
+  color: rgb(var(--on-accent));
 }
